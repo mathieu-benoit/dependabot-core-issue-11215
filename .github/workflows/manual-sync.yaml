@@ -11,7 +11,7 @@ jobs:
             tag: 20250911-alpine3.22
           - registry: dhi.io
             name: golang
-            tag: 1.25-alpine
+            tag: 1.25-alpine3.22
     runs-on: ubuntu-latest
     permissions:
       contents: read
