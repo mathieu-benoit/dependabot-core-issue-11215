@@ -12,6 +12,9 @@ jobs:
           - registry: dhi.io
             name: golang
             tag: 1.25-alpine3.22
+          - registry: gcr.io/distroless
+            name: base-nossl-debian11
+            tag: debug
     runs-on: ubuntu-latest
     permissions:
       contents: read
