@@ -4,7 +4,15 @@ updates:
     directory: "/issue-with-distroless/"
     schedule:
       interval: "weekly"
+    groups:
+      ci:
+        patterns:
+          - "*"
   - package-ecosystem: "docker"
     directory: "/no-issue-with-distroless/"
     schedule:
       interval: "weekly"
+    groups:
+      ci:
+        patterns:
+          - "*"
