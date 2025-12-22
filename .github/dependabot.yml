@@ -16,3 +16,11 @@ updates:
       ci:
         patterns:
           - "*"
+  - package-ecosystem: "docker"
+    directory: "/issue-with-dotnet/"
+    schedule:
+      interval: "weekly"
+    groups:
+      ci:
+        patterns:
+          - "*"
