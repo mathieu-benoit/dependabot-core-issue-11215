@@ -1,0 +1,1 @@
+FROM gcr.io/distroless/base-nossl-debian11:debug
