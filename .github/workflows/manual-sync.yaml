@@ -36,6 +36,6 @@ jobs:
       - name: Run regctl
         run: |
           regctl image copy \
-            "${{ matrix.registry }}/${{ matrix.name }}:${{ matrix.tag }}" \
-            "ghcr.io/mathieu-benoit/${{ matrix.name }}:${{ matrix.tag }}" \
+            "${{ matrix.image.registry }}/${{ matrix.image.name }}:${{ matrix.image.tag }}" \
+            "ghcr.io/mathieu-benoit/${{ matrix.image.name }}:${{ matrix.image.tag }}" \
             --force-recursive
