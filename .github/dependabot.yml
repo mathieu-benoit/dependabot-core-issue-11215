@@ -60,3 +60,13 @@ updates:
       ci:
         patterns:
           - "*"
+  - package-ecosystem: "docker"
+    directory: "/no-issue-with-dhi-demoorg/"
+    schedule:
+      interval: "weekly"
+    registries:
+    - doi
+    groups:
+      ci:
+        patterns:
+          - "*"
