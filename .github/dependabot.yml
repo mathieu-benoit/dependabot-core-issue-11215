@@ -80,3 +80,13 @@ updates:
       ci:
         patterns:
           - "*"
+  - package-ecosystem: "docker"
+    directory: "/dhi-node-digest/"
+    schedule:
+      interval: "weekly"
+    registries:
+    - dhi
+    groups:
+      ci:
+        patterns:
+          - "*"
