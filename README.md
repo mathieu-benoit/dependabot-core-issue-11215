@@ -8,15 +8,15 @@ Seems to be happening with a combination of:
 - With digest.
 
 I'm able to consistently reproduce this issue here:
-- `dhi-node-digest/Dockerfile`
+- `dhi-node-digest-suffix/Dockerfile`
   - `dhi.io/node:24-debian13-dev` and `dhi.io/node:24-debian13`
-  - [error logs](https://github.com/mathieu-benoit/dependabot-core-issue-11215/actions/runs/20465249466/job/58807268053)
-- `issue-with-dotnet/Dockerfile`
+  - [error logs](https://github.com/mathieu-benoit/dependabot-core-issue-11215/actions/runs/20470718319/job/58825196566)
+- `dotnet/Dockerfile`
   - `mcr.microsoft.com/dotnet/aspnet:10.0.1-noble` and `mcr.microsoft.com/dotnet/aspnet:10.0.1-noble-chiseled`
-  - [error logs](https://github.com/mathieu-benoit/dependabot-core-issue-11215/actions/runs/20465189538/job/58807069065)
-- `issue-with-distroless/Dockerfile`
+  - [error logs](https://github.com/mathieu-benoit/dependabot-core-issue-11215/actions/runs/20470718612/job/58825197398)
+- `distroless-different-image/Dockerfile`
   - `gcr.io/distroless/static-debian13:debug` and `gcr.io/distroless/static-debian13:debug-nonroot`
-  - [error logs](https://github.com/mathieu-benoit/dependabot-core-issue-11215/actions/runs/20465189380/job/58807069004)
+  - [error logs](https://github.com/mathieu-benoit/dependabot-core-issue-11215/actions/runs/20470718864/job/58825198248)
 
 Example of the logs:
 ```none

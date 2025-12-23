@@ -45,6 +45,14 @@ updates:
         patterns:
           - "*"
   - package-ecosystem: "docker"
+    directory: "/distroless-same-image/"
+    schedule:
+      interval: "weekly"
+    groups:
+      ci:
+        patterns:
+          - "*"
+  - package-ecosystem: "docker"
     directory: "/dotnet/"
     schedule:
       interval: "weekly"
