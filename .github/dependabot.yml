@@ -12,7 +12,7 @@ registries:
     password: ${{ secrets.DOCKER_HUB_TOKEN }}
   doi:
     type: docker-registry
-    url: docker.io
+    url: https://registry.hub.docker.com
     username: ${{ secrets.DOCKER_HUB_USERNAME }}
     password: ${{ secrets.DOCKER_HUB_TOKEN }}
 updates:
