@@ -50,8 +50,3 @@ updater | 2025/12/23 15:50:36 INFO <job_1189631726> Updating node from 25-debian
 updater | 2025/12/23 15:50:36 ERROR <job_1189631726> Error processing node (RuntimeError)
 2025/12/23 15:50:36 ERROR <job_1189631726> No files changed!
 ```
-
-
-
-I also have another issue, but still need to investigate, not reported yet:
-- FIXME
