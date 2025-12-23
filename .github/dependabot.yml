@@ -38,8 +38,6 @@ updates:
     directory: "/distroless-different-image/"
     schedule:
       interval: "weekly"
-    registries:
-    - ghcr
     groups:
       ci:
         patterns:
