@@ -10,6 +10,8 @@ updates:
     directory: "/dhi-different-image/"
     schedule:
       interval: "weekly"
+    registries:
+    - dhi
     groups:
       ci:
         patterns:
