@@ -15,6 +15,10 @@ jobs:
           - registry: gcr.io/distroless
             name: base-nossl-debian11
             tag: debug
+          - registry: docker.io
+            name: demonstrationorg/dhi-mabenoit-node
+            tag: 20-dev
+
     runs-on: ubuntu-latest
     permissions:
       contents: read
