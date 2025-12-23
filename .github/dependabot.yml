@@ -1,23 +1,13 @@
 version: 2
 registries:
-  ghcr:
-    type: docker-registry
-    url: ghcr.io
-    username: ${{ github.actor }}
-    password: ${{ secrets.PAT_GITHUB_TOKEN }}
   dhi:
     type: docker-registry
     url: dhi.io
     username: ${{ secrets.DOCKER_HUB_USERNAME }}
     password: ${{ secrets.DOCKER_HUB_TOKEN }}
-  doi:
-    type: docker-registry
-    url: https://registry.hub.docker.com
-    username: ${{ secrets.DOCKER_HUB_USERNAME }}
-    password: ${{ secrets.DOCKER_HUB_TOKEN }}
 updates:
   - package-ecosystem: "docker"
-    directory: "/issue-with-distroless/"
+    directory: "/dhi-different-image/"
     schedule:
       interval: "weekly"
     groups:
@@ -25,23 +15,27 @@ updates:
         patterns:
           - "*"
   - package-ecosystem: "docker"
-    directory: "/no-issue-with-distroless/"
+    directory: "/dhi-node-digest-suffix/"
     schedule:
       interval: "weekly"
+    registries:
+    - dhi
     groups:
       ci:
         patterns:
           - "*"
   - package-ecosystem: "docker"
-    directory: "/issue-with-dotnet/"
+    directory: "/dhi-node-tag-suffix/"
     schedule:
       interval: "weekly"
+    registries:
+    - dhi
     groups:
       ci:
         patterns:
           - "*"
   - package-ecosystem: "docker"
-    directory: "/no-issue-with-distroless-private/"
+    directory: "/distroless-different-image/"
     schedule:
       interval: "weekly"
     registries:
@@ -51,41 +45,9 @@ updates:
         patterns:
           - "*"
   - package-ecosystem: "docker"
-    directory: "/no-issue-with-dhi/"
+    directory: "/dotnet/"
     schedule:
       interval: "weekly"
-    registries:
-    - dhi
-    groups:
-      ci:
-        patterns:
-          - "*"
-  - package-ecosystem: "docker"
-    directory: "/no-issue-with-dhi-demoorg/"
-    schedule:
-      interval: "weekly"
-    registries:
-    - doi
-    groups:
-      ci:
-        patterns:
-          - "*"
-  - package-ecosystem: "docker"
-    directory: "/dhi-node/"
-    schedule:
-      interval: "weekly"
-    registries:
-    - dhi
-    groups:
-      ci:
-        patterns:
-          - "*"
-  - package-ecosystem: "docker"
-    directory: "/dhi-node-digest/"
-    schedule:
-      interval: "weekly"
-    registries:
-    - dhi
     groups:
       ci:
         patterns:

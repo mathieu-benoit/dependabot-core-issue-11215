@@ -1,3 +1,0 @@
-FROM demonstrationorg/dhi-mabenoit-node:24.11.1-debian12-dev@sha256:a684b1a61b46db6ea3e6d912a8682fbb1ce93bc27aa2f7fcde7d0bcec74105ba
-
-FROM demonstrationorg/dhi-mabenoit-node:24.11.1-debian12@sha256:3755ed3a46848bebf4d54087a715ecddfc243fab65469ad79364c93a391cf558
