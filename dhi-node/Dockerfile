@@ -1,4 +1,4 @@
-FROM dhi.io/node:24-debian13-dev AS builder
+FROM dhi.io/node:25-debian13-dev AS builder
 
 WORKDIR /app
 
@@ -6,7 +6,7 @@ COPY package.json ./
 
 RUN npm i --no-optional && npm cache clean --force
 
-FROM dhi.io/node:24-debian13
+FROM dhi.io/node:25-debian13
 
 ENV BLUEBIRD_WARNINGS=0 \
   NODE_ENV=production \
