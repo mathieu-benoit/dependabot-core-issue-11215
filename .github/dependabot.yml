@@ -70,3 +70,13 @@ updates:
       ci:
         patterns:
           - "*"
+  - package-ecosystem: "docker"
+    directory: "/dhi-node/"
+    schedule:
+      interval: "weekly"
+    registries:
+    - dhi
+    groups:
+      ci:
+        patterns:
+          - "*"
