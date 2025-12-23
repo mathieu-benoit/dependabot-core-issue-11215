@@ -10,6 +10,11 @@ registries:
     url: dhi.io
     username: ${{ secrets.DOCKER_HUB_USERNAME }}
     password: ${{ secrets.DOCKER_HUB_TOKEN }}
+  doi:
+    type: docker-registry
+    url: docker.io
+    username: ${{ secrets.DOCKER_HUB_USERNAME }}
+    password: ${{ secrets.DOCKER_HUB_TOKEN }}
 updates:
   - package-ecosystem: "docker"
     directory: "/issue-with-distroless/"
