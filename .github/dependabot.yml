@@ -2,9 +2,14 @@ version: 2
 registries:
   ghcr:
     type: docker-registry
-    url: https://dhi.docker.com
+    url: ghcr.io
     username: ${{ github.actor }}
     password: ${{ secrets.PAT_GITHUB_TOKEN }}
+  dhi:
+    type: docker-registry
+    url: https://dhi.docker.com
+    username: ${{ secrets.DOCKER_HUB_USERNAME }}
+    password: ${{ secrets.DOCKER_HUB_TOKEN }}
 updates:
   - package-ecosystem: "docker"
     directory: "/issue-with-distroless/"
@@ -36,6 +41,16 @@ updates:
       interval: "weekly"
     registries:
     - ghcr
+    groups:
+      ci:
+        patterns:
+          - "*"
+  - package-ecosystem: "docker"
+    directory: "/no-issue-with-dhi/"
+    schedule:
+      interval: "weekly"
+    registries:
+    - dhi
     groups:
       ci:
         patterns:
