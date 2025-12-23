@@ -7,8 +7,7 @@ registries:
     password: ${{ secrets.PAT_GITHUB_TOKEN }}
   dhi:
     type: docker-registry
-    url: https://registry.hub.docker.com
-    #url: dhi.io
+    url: dhi.io
     username: ${{ secrets.DOCKER_HUB_USERNAME }}
     password: ${{ secrets.DOCKER_HUB_TOKEN }}
   doi:
