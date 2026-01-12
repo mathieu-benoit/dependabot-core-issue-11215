@@ -1,5 +1,5 @@
 # Comment
-FROM gcr.io/distroless/static-debian13:debug-nonroot@sha256:dafe405d2cd55f5d5abaa0fabfa90cff628ec7091f2a3da9389fcfe4d876a7ce AS stage1
+FROM gcr.io/distroless/static-debian13:debug-nonroot@sha256:b3b2f6a2d60fef92dee49c41be0b186b200e4b38d3f9eee04b2f539248ab96f5 AS stage1
 
 # Comment
-FROM gcr.io/distroless/static-debian13:debug@sha256:b7cb601215dc8e5c39256f0b2f024cb2df49095b3f643bb16dd35d8e8ab258d3 AS stage2
+FROM gcr.io/distroless/static-debian13:debug@sha256:294de85ab5e4295b8ecd1709ab6ade9e0d2c40fa12f18bda62813cc10cd67655 AS stage2
