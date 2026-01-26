@@ -1,4 +1,4 @@
-FROM dhi.io/node:25-debian13-dev@sha256:30eea31957c2c2037eb41c40e43f1b26f6b8537adfe0364808aa90988718f37b AS builder
+FROM dhi.io/node:25-debian13-dev@sha256:d9ad8f3a2acb57bd4a55de494dddf0c866e5851f2d561f74c13b1cddfefd2270 AS builder
 
 WORKDIR /app
 
@@ -6,7 +6,7 @@ COPY package.json ./
 
 RUN npm i --no-optional && npm cache clean --force
 
-FROM dhi.io/node:25-debian13@sha256:eb1f1cd9b0cdd8f87c69a72d06999a7ecab3b9eabf25f977aae25e7596eb2a51
+FROM dhi.io/node:25-debian13@sha256:7539746ae5fe68175b2f31d6221705cdaa90daa2b34d569292af483cea3bfc2d
 
 ENV BLUEBIRD_WARNINGS=0 \
   NODE_ENV=production \
